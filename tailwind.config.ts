@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Config } from 'tailwindcss';
 
 const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette');
@@ -31,3 +32,25 @@ function addVariablesForColors({ addBase, theme }: any) {
 		':root': newVars,
 	});
 }
+=======
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
+>>>>>>> dadaee69509c9eeb453152b68db855081e5895e6
