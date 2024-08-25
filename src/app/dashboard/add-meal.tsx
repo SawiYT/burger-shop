@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Label } from '@/app/components/ui/label';
-import { Input } from '@/app/components/ui/input';
-import { cn } from '@/app/lib/utils';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
 import { IconBrandGithub, IconBrandGoogle, IconBrandOnlyfans } from '@tabler/icons-react';
-import { FileUpload } from '@/app/components/ui/file-upload';
+import { FileUpload } from '@/components/ui/file-upload';
 import { AddMenu } from '../api/menu-action';
 
 export default function AddMeal() {
@@ -17,10 +17,8 @@ export default function AddMeal() {
 
 	return (
 		<div className='max-w-md w-full mx-auto rounded-none md:rounded-2xl md:p-8 shadow-input bg-white dark:bg-black'>
-			<h2 className='font-bold text-xl text-black dark:text-white'>Welcome to Aceternity</h2>
-			<p className='text-black text-sm max-w-sm mt-2 dark:text-gray-300'>
-				Login to aceternity if you can because we don&apos;t have a login flow yet
-			</p>
+			<h2 className='font-bold text-xl text-black dark:text-white'>Add your product</h2>
+			<p className='text-black text-sm max-w-sm mt-2 dark:text-gray-300'>add a product to the selected category</p>
 
 			<form className='my-8' action={AddMenu}>
 				<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4'>

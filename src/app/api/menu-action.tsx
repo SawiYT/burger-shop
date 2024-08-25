@@ -5,17 +5,36 @@ import { revalidatePath } from 'next/cache';
 import { saveMenu } from './menu';
 import { saveDiscount } from './discount';
 
+interface Menu {
+	id?: number;
+	title: string;
+	description: string;
+	image_url: string | File;
+  }
+
 export async function AddMenu(formData: FormData): Promise<void> {
-	const menu = {
-		title: formData.get('title'),
-		description: formData.get('description'),
-		image_url: '/images/bg1.png',
-	};
+  const title = formData.get('title') as string | null;
+  const description = formData.get('description') as string | null;
+  const imageUrl = formData.get('image_url') as File | string | null;
 
-	const formType = formData.get('formType');
+  if (!title || !description || !imageUrl) {
+    throw new Error('Missing required fields');
+  }
 
-	console.log(menu);
-	formType === 'meal' ? await saveMenu(menu) : saveDiscount(menu);
-	revalidatePath('/menu');
-	redirect('/menu');
+  const menu: Menu = {
+    title,
+    description,
+    image_url: imageUrl,
+  };
+
+  const formType = formData.get('formType');
+
+  if (formType === 'meal') {
+    await saveMenu(menu);
+  } else {
+    await saveDiscount(menu);
+  }
+
+  revalidatePath('/menu');
+  redirect('/menu');
 }

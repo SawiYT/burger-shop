@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
+    "@prisma/client": "^5.18.0",
     "@radix-ui/react-label": "^2.1.0",
     "@tabler/icons-react": "^3.12.0",
     "chart.js": "^4.4.4",
@@ -18,11 +18,14 @@
     "framer-motion": "^11.3.29",
     "mysql2": "^3.11.0",
     "next": "14.2.5",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
-    "tailwind-merge": "^2.5.2"
+    "slugify": "^1.6.6",
+    "tailwind-merge": "^2.5.2",
+    "xss": "^1.0.15"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -31,22 +34,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
+    "prisma": "^5.18.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-=======
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
->>>>>>> dadaee69509c9eeb453152b68db855081e5895e6
   }
 }

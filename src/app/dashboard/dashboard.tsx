@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { fetchDiscountsCount, fetchMenuItemsCount } from '../components/products';
+import { fetchDiscountsCount, fetchMenuItemsCount } from '../../components/products';
 import { Bar } from 'react-chartjs-2';
+import HasPermission from '@/components/has-permission';
 
 export default function Dashboard() {
 	const [discountsCount, setDiscountsCount] = useState(0);
@@ -89,11 +90,6 @@ export default function Dashboard() {
 									understand the output on the dashboard. Our goal is to provide you with clear and actionable insights.
 									If you have any questions or need assistance, please don't hesitate to reach out to our support team.
 									We're here to help you make the most of your data!
-								</p>
-								<p className='text-gray-600 dark:text-gray-400'>
-									To get started, explore the various charts and metrics available on this dashboard. Each component is
-									designed to give you a comprehensive view of our key performance indicators. Remember to check back
-									regularly for the latest updates and insights.
 								</p>
 							</div>
 						</div>

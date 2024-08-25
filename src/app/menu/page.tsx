@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { fetchDiscounts } from '../components/main';
-import MenuBox from '../components/menu-box';
-import SmallMenuBox from '../components/small-menu-box';
-import { fetchBestsellers } from '../components/bestsellers';
-import BestsellerBox from '../components/bestseller-box';
-import Footer from '../components/footer';
+import { fetchDiscounts } from '../../components/main';
+import MenuBox from '../../components/menu-box';
+import SmallMenuBox from '../../components/small-menu-box';
+import { fetchBestsellers } from '../../components/bestsellers';
+import BestsellerBox from '../../components/bestseller-box';
+import Footer from '../../components/footer';
 
 async function page() {
 	const discounts = await fetchDiscounts();

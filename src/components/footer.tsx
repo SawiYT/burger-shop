@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Footer() {
@@ -10,19 +11,13 @@ function Footer() {
 				</div>
 				<ul className='flex flex-col md:flex-row items-center gap-4'>
 					<li>
-						<a href='#menu' className='hover:text-gray-200'>
-							Menu
-						</a>
+						<Link href={'/'}>Home</Link>
 					</li>
 					<li>
-						<a href='#about' className='hover:text-gray-200'>
-							About Us
-						</a>
+						<Link href={'/menu'}>Menu</Link>
 					</li>
 					<li>
-						<a href='#contact' className='hover:text-gray-200'>
-							Contact
-						</a>
+						<Link href={'/dashboard'}>Dashboard</Link>
 					</li>
 				</ul>
 			</div>
