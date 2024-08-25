@@ -20,7 +20,7 @@ export default async function BestSellers() {
 	const topFourBestsellers = bestsellers.slice(0, 4);
 
 	return (
-		<div className='bg-white pb-20'>
+		<div id='bestsellers' className='bg-white pb-20'>
 			<h2 className='text-center  pt-20 text-3xl md:text-4xl font-bold bg-white text-neutral-800 mb-12'>Bestsellers</h2>
 			<div className='flex justify-center items-center flex-wrap gap-8'>
 				{topFourBestsellers.map((item: Bestseller) => (

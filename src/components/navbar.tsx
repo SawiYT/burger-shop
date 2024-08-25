@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/../../public/images/logo.png';
 import { signIn, signOut, useSession } from 'next-auth/react';
-import { IconMenu2, IconX } from '@tabler/icons-react'; 
+import { IconMenu2, IconX } from '@tabler/icons-react';
 
 function AuthButton() {
 	const { data: session } = useSession();
@@ -37,17 +37,13 @@ export default function Navbar() {
 				<div className='flex items-center'>
 					<div className='md:hidden'>
 						<button onClick={() => setIsOpen(!isOpen)} className='text-black focus:outline-none'>
-							{isOpen ? (
-								<IconX className='h-6 w-6' /> 
-							) : (
-								<IconMenu2 className='h-6 w-6' /> 
-							)}
+							{isOpen ? <IconX className='h-6 w-6' /> : <IconMenu2 className='h-6 w-6' />}
 						</button>
 					</div>
 					<div className='hidden md:flex space-x-6 font-semibold'>
 						<Link href='/'>Home</Link>
 						<Link href='/menu'>Menu</Link>
-						<Link href='/restaurants'>Restaurants</Link>
+						<Link href='https://www.facebook.com/'>Facebook</Link>
 					</div>
 				</div>
 
@@ -70,9 +66,6 @@ export default function Navbar() {
 						</Link>
 						<Link href='/menu' className='text-lg font-semibold'>
 							Menu
-						</Link>
-						<Link href='/restaurants' className='text-lg font-semibold'>
-							Restaurants
 						</Link>
 						<AuthButton />
 					</div>
